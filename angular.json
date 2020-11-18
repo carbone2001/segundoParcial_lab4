@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -117,8 +118,16 @@
               "devServerTarget": "SegundoParcialLab4:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "SegundoParcialLab4"
+    }
+  },
+  "defaultProject": "SegundoParcialLab4",
+  "cli": {
+    "analytics": false
+  }
 }

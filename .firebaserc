@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "prueba-app-4589e": {
+      "hosting": {
+        "SegundoParcialLab4": [
+          "prueba-app-4589e"
+        ]
+      }
+    }
+  }
+}

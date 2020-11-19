@@ -1,0 +1,5 @@
+<app-listado-materias (OnElegir)="MateriaElegida($event)"></app-listado-materias>
+<app-listado-alumnos (OnElegir)="UsuarioElegido($event)"></app-listado-alumnos><br><br>
+<div *ngIf="alumno && materia">
+<button mat-raised-button (click)="AgregarInscriptoMateria()">Inscribir {{alumno.correo}} a {{materia.nombre}}</button>
+</div>

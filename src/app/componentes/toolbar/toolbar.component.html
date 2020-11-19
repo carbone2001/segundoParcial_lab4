@@ -1,0 +1,29 @@
+<mat-toolbar *ngIf="auth.usuarioInfo.tipo == 'ADMINISTRADOR'">
+    <button mat-flat-button color="primary" (click)="Opcion('altaAdmin')">Alta admin</button>
+    <span style="width: 1%;"> </span>
+    <button mat-flat-button color="primary" (click)="Opcion('altaMateria')">Alta materia</button>
+    <span style="width: 1%;"> </span>
+    <button mat-flat-button color="primary" (click)="Opcion('inscripcionAdmin')">Inscripciones</button>
+    <span style="width: 1%;"> </span>
+    <button mat-flat-button color="primary" (click)="Opcion('listadoMaterias')">Listado Materias</button>
+    <span style="width: 1%;"> </span>
+    <button mat-flat-button color="primary" (click)="Opcion('listadoUsuarios')">Listado Usuarios</button>
+    <span style="flex: 1 1 auto;"></span>
+    <app-email></app-email>
+</mat-toolbar>
+
+<mat-toolbar *ngIf="auth.usuarioInfo.tipo == 'ALUMNO'">
+    <button mat-flat-button color="primary" (click)="Opcion('inscripcionAlumno')">Inscripcion</button>
+    <span style="width: 1%;"> </span>
+    <button mat-flat-button color="primary" (click)="Opcion('listadoInscripcionesAlumno')">Materias inscriptas</button>
+    <span style="flex: 1 1 auto;"></span>
+    <app-email></app-email>
+</mat-toolbar>
+
+<mat-toolbar *ngIf="auth.usuarioInfo.tipo == 'PROFESOR'">
+    <button mat-flat-button color="primary" (click)="Opcion('materiasCargoProfesor')">Materias a cargo</button>
+    <span style="width: 1%;"> </span>
+    <button mat-flat-button color="primary" (click)="Opcion('alumnosMateriaCargoProfesor')">Alumnos de Materias a cargo</button>
+    <span style="flex: 1 1 auto;"></span>
+    <app-email></app-email>
+</mat-toolbar>

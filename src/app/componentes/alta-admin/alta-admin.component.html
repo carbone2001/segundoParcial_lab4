@@ -1,0 +1,27 @@
+<div style="height: 100%;" align="center">
+    <mat-card style="width: 50%;max-width: 400px;min-width: 300px;background-color: rgb(247, 247, 247);">
+        <form [formGroup]="profileForm">
+            <mat-card-header>
+                <h1><b>Alta de Administrador</b></h1>
+            </mat-card-header>
+            <mat-form-field>
+                <mat-label>Correo</mat-label>
+                <input formControlName="correo" [(ngModel)]="usuario.correo" matInput placeholder="Ingrese su correo">
+            </mat-form-field>
+            <div *ngIf="!profileForm.controls.correo.valid">
+                <b>Correo Incorrecto</b>
+            </div>
+            <br>
+            <mat-form-field>
+                <mat-label>Clave</mat-label>
+                <input type="password" formControlName="clave" [(ngModel)]="usuario.clave" matInput placeholder="Ingrese su clave">
+            </mat-form-field>
+            <div *ngIf="!profileForm.controls.clave.valid">
+                <b>Clave Incorrecta</b>
+            </div>
+            <br>
+            <br>
+            <button [disabled]="!profileForm.valid" mat-flat-button color="primary" (click)="Registrar()">Registrarse</button>
+        </form>
+    </mat-card>
+</div>
